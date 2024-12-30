@@ -1733,6 +1733,17 @@ ul.social-conatct li img.face {
   color: white;
   filter: saturate(85%);
 }
+@media (max-width: 767px) {
+  .legal-support-container-fluid {
+    padding: 0 !important;
+    background: linear-gradient(to right, #235790 0%, #a31921 100%);
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    color: white;
+    filter: saturate(85%);
+  }
+}
 
 .legal-support-container-fluid::before {
   content: "";
