@@ -8,40 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     indexz.classList.toggle("indexboom");
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const backButton = document.getElementById("back-button1");
-    const nextButton = document.getElementById("next-button1");
-    const supportBoxes = document.querySelectorAll(".branch-support-box");
-
-    // Only run if the elements exist
-    if (backButton && nextButton && supportBoxes.length > 0) {
-      // Function to update button states
-      function updateButtonState() {
-        const hasSelected =
-          document.querySelector(".branch-support-box.selected") !== null;
-
-        if (hasSelected) {
-          backButton.classList.remove("disabled");
-          nextButton.classList.remove("disabled");
-        } else {
-          backButton.classList.add("disabled");
-          nextButton.classList.add("disabled");
-        }
-      }
-
-      supportBoxes.forEach((box) => {
-        box.addEventListener("click", () => {
-          supportBoxes.forEach((b) => b.classList.remove("selected"));
-          box.classList.add("selected");
-          updateButtonState();
-        });
-      });
-
-      // Initial state
-      updateButtonState();
-    }
-  });
-
   // Modal management
   const infoIcons = document.querySelectorAll(".info-icon");
   const modals = document.querySelectorAll(".modal");
@@ -94,3 +60,36 @@ function toggleFaq(element) {
   const faqItem = element.closest(".faq-item");
   faqItem.classList.toggle("active");
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const backButton = document.getElementById("back-button1");
+  const nextButton = document.getElementById("next-button1");
+  const supportBoxes = document.querySelectorAll(".branch-support-box");
+
+  // Only run if the elements exist
+  if (backButton && nextButton && supportBoxes.length > 0) {
+    // Function to update button states
+    function updateButtonState() {
+      const hasSelected =
+        document.querySelector(".branch-support-box.selected") !== null;
+
+      if (hasSelected) {
+        backButton.classList.remove("disabled");
+        nextButton.classList.remove("disabled");
+      } else {
+        backButton.classList.add("disabled");
+        nextButton.classList.add("disabled");
+      }
+    }
+
+    supportBoxes.forEach((box) => {
+      box.addEventListener("click", () => {
+        supportBoxes.forEach((b) => b.classList.remove("selected"));
+        box.classList.add("selected");
+        updateButtonState();
+      });
+    });
+
+    // Initial state
+    updateButtonState();
+  }
+});
