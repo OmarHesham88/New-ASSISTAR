@@ -1759,6 +1759,7 @@ ul.social-conatct li img.face {
 
 /* Navbar */
 .navbar-legal {
+  z-index: 50;
   color: white;
   padding: 20px 20px;
   border-bottom: 0.5px solid rgba(238, 238, 238, 0.2);
@@ -1874,8 +1875,54 @@ ul.social-conatct li img.face {
   width: 16px;
   height: 16px;
 }
-
+.mobile-login {
+  display: none;
+}
 /* Mobile Styles */
+/* Mobile Styles */
+@media screen and (max-width: 920px) {
+  /* Hide the desktop login button */
+  .desktop-login {
+    display: none;
+  }
+
+  /* Ensure the mobile login appears inside the dropdown */
+  .mobile-login {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .mobile-login .navbar-login-btn {
+    background: linear-gradient(
+      135deg,
+      #ffd700,
+      #ff7f00
+    ); /* Add gradient for login */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .mobile-login .navbar-login-btn:hover {
+    background: linear-gradient(
+      135deg,
+      #ff7f00,
+      #ffd700
+    ); /* Hover effect for login */
+    transform: scale(1.05);
+  }
+
+  .mobile-login .navbar-login-icon img {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 920px) {
   .navbar-links {
     display: none; /* Hide links initially */
@@ -1884,18 +1931,57 @@ ul.social-conatct li img.face {
     position: absolute;
     top: 80px; /* Adjust based on your navbar height */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* Match navbar background */
-    padding: 20px 0;
-    z-index: 999; /* Ensure it stays above other content */
+    background: linear-gradient(
+      135deg,
+      #235790,
+      #a31921
+    ); /* Gradient background */
+    border-radius: 0 0 20px 20px; /* Rounded corners for the dropdown */
+    padding: 20px 10px;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
   }
 
   .navbar-links.show {
     display: flex; /* Show links when toggled */
+    animation: fadeIn 0.4s ease-in-out; /* Smooth fade-in animation */
   }
 
   .navbar-links li {
-    margin: 10px 0;
+    margin: 12px 0;
     text-align: center;
+    list-style: none;
+    border-radius: 12px; /* Add hoverable shape for each item */
+    overflow: hidden; /* Clip the hover effect */
+  }
+
+  .navbar-links a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background on links */
+  }
+
+  .navbar-links a:hover {
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    transform: translateY(-2px); /* Add a hover lift */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
+  }
+
+  /* Styling for active link */
+  .navbar-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd700; /* Highlight active item */
   }
 
   .navbar-toggle {
@@ -1903,13 +1989,47 @@ ul.social-conatct li img.face {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 1000;
+    transition: transform 0.3s ease;
   }
 
-  .navbar-actions {
-    display: none; /* Hide actions on mobile */
+  .navbar-toggle:hover {
+    transform: scale(1.2);
+  }
+
+  .navbar-badge {
+    display: inline-block;
+    background-color: #ffd700; /* Golden badge color */
+    color: #1e3c72;
+    font-size: 9px;
+    padding: 3px 6px;
+    border-radius: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  /* Add subtle divider lines */
+  .navbar-links li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Glow effect for the gradient background */
+  .navbar-links {
+    backdrop-filter: blur(10px); /* Blur effect for the dropdown background */
+  }
+}
+
+/* Animation for dropdown menu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1988,22 +2108,15 @@ ul.social-conatct li img.face {
 }
 
 .support-boxes {
-  /* Remove the initial border declaration that uses linear-gradient */
-  /* border: solid 2px linear-gradient(to right, #235790, #a31921); */
-
-  /* Set a solid border as a fallback */
   border: 1px solid #235790;
-
-  /* Apply the gradient using border-image */
-  /* border-image: linear-gradient(to right, #235790, #a31921) 1; */
 
   transform: translateY(-120px);
   padding: 20px;
-  background-color: white; /* Pure white background */
+  background-color: white;
   border-radius: 20px;
   max-width: 90%;
   margin: 20px auto 0 auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a raised effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .support-header {
