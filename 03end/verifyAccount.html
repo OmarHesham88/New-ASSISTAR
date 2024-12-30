@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/icon-short.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+       >
+    <!-- date Picker -->
+    <link rel="stylesheet" href="css/zebra_datepicker.min.css" type="text/css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/richtext.min.css">
+     <!-- sweetalert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.css">
+    <!-- Select-2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assistar Admin Panel</title>
+</head>
+
+<body>
+    <div class="content">
+
+<!-- Start verify account -->
+<div class="verify-acc">
+    <div class="acc-logo">
+        <img src="images/Bitmap.png" alt="logo" width="150">
+    </div>
+    <div class="verify-forma">
+        <div class="forma-header">
+             <img src="images/mail-icon.png" alt="" width="100">
+        </div>
+        <div class="forma-content">
+            <p>Hi [first name]!</p>
+            <p>Click on the button below to verify your account: </p>
+            <button>VERIFY</button>
+            <p>If  you  have  any  questions  or  concerns  about  Assistar,
+                please  let  us  know  at  team@theassistar.com.  We'll  be
+                happy to help!</p>
+                <p>
+                    <span>
+                        Best regards,
+                    </span>
+                    <span>Team @ Assistar
+                    </span>
+                </p>
+        </div>
+    </div>
+    <div class="forma-social">
+        <a href="#"><img src="images/world.png" alt=""></a>
+        <a href="#"><img src="images/insta.png" alt=""></a>
+    </div>
+</div>
+<!-- End verify account -->
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.0.min.js"
+        ></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js"
+        >
+    </script>
+    <!-- toolbar for text editor  -->
+    <script src="js/jquery.richtext.js"></script>
+    <!-- font-awesome -->
+    <script src="js/all.min.js"></script>
+  <!-- sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- EqualHeight -->
+    <script src="js/jquery.equalheights.min.js"></script>
+    <!-- Select-s2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- own js -->
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //  responsive table
+            $('.main-table td, .main-table th').equalHeights();
+            $('.textArea').richText();
+            $('.richText-editor').attr('contenteditable')
+            $('.richText-editor').attr('placeholder', 'Write here . . . ')
+            var input = $(".richText-editor");
+            input.keypress(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', '')
+                }
+            });
+            input.keyup(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', 'write here ... ')
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

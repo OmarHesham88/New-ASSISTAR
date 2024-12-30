@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/icon-short.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+       >
+    <!-- date Picker -->
+    <link rel="stylesheet" href="css/zebra_datepicker.min.css" type="text/css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/richtext.min.css">
+         <!-- sweetalert -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.css">
+
+    <!-- Select-2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assistar Admin Panel</title>
+</head>
+
+<body>
+    <div class="content">
+
+        <!-- Start admin Panel -->
+        <section class="container-fluid">
+            <div class="admin-panel">
+                <div class="row">
+                    <!-- start panel-section -->
+                    <div class="col-md-1">
+                        <div class="admin-picture">
+                            <img src="./images/admin.png" alt="">
+                        </div>
+                        <div class="panel-line">
+                            <ul>
+                                <a href="admin.html">
+                                    <li><img src="./images/shape-outline.png" alt=""></li>
+                                </a>
+                                <a href="tags.html">
+                                    <li><img src="./images/tags.png" alt=""></li>
+                                </a>
+                                <a href="coupons.html">
+                                    <li><img src="./images/coupons.png" alt=""></li>
+                                </a>
+                                <a href="offers.html">
+                                    <li><img src="./images/offers.png" alt=""></li>
+                                </a>
+                                <a href="subscribtion.html">
+                                    <li><img src="./images/playlist-check.png" alt=""></li>
+                                </a>
+                                <a href="templates.html">
+                                    <li><img src="./images/file-document-outline.png" alt=""></li>
+                                </a>
+                                <a href="users.html">
+                                    <li><img src="./images/account-outline.png" alt=""></li>
+                                </a>
+                                <a href="admins.html">
+                                    <li><img src="./images/account-multiple-outline.png" alt=""></li>
+                                </a>
+                                <a href="invoices.html">
+                                    <li><img src="./images/receipt-text-outline.png" alt=""></li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="panel-bottom">
+                            <a href="setting.html" class="setting active">
+                                <i class="fa-solid fa-gears"></i>
+                            </a>
+                            <div class="profile-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="notification">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- panel-nav -->
+                    <div class="open-panel">
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </div>
+                    <div class="close-panel">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                 
+                    <div class="panel-nav">
+
+                        <div class="panel-header">
+                            <h4>ASSISTAR</h4>
+                            <!-- panel-nav -->
+
+                        </div>
+
+                        <div class="panel-slide">
+                            <div class="search">
+                                <input type="text" placeholder="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <ul>
+                                <a href="admin.html">
+                                    <li><img src="./images/shape-outline.png" alt="">Categories</li>
+                                </a>
+                                <a href="tags.html">
+                                    <li><img src="./images/tags.png" alt="">Tags</li>
+                                </a>
+                                <a href="coupons.html">
+                                    <li><img src="./images/coupons.png" alt="">Coupons</li>
+                                </a>
+                                <a href="offers.html">
+                                    <li><img src="./images/offers.png" alt="">Offers</li>
+                                </a>
+                                <a href="subscribtion.html">
+                                    <li><img src="./images/playlist-check.png" alt="">Subscription Management</li>
+                                </a>
+                                <a href="templates.html">
+                                    <li><img src="./images/file-document-outline.png" alt="">Templates
+                                    </li>
+                                </a>
+                                <a href="users.html">
+                                    <li><img src="./images/account-outline.png" alt="">Users </li>
+                                </a>
+                                <a href="admins.html">
+                                    <li><img src="./images/account-multiple-outline.png" alt="">Admins</li>
+                                </a>
+                                <a href="invoices.html">
+                                    <li ><img src="./images/receipt-text-outline.png" alt="">Invoices</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- End panel-section -->
+                    <!-- Start admin section -->
+                    <div class="col-md-11">
+                        <div class="admin-section setting-panel">
+                            <h3>Web Setting</h3>
+                            <!-- Start setting nav -->
+                            <nav>
+                                <a class="active" href="./setting.html">
+                                    <li>Home Page</li>
+                                </a>
+                                <a href="./about.html">
+                                    <li>About us</li>
+                                </a>
+                                <a href="./blog.html">
+                                    <li>Blog</li>
+                                </a>
+                                <a href="./help.html">
+                                    <li>Help</li>
+                                </a>
+                            </nav>
+                            <!-- End setting nav -->
+                            <!-- Start web banner -->
+                            <div class="web-banner">
+                                <div class="header">
+                                    <h4>Web Banner</h4>
+                                    <div>
+                                        <span><i class="fa-solid fa-plus"></i></span>
+                                        <span> <i class="fa-solid fa-pen"></i></span>
+                                        <span><i class="fa-solid fa-trash"></i></span>
+
+                                    </div>
+                                </div>
+                                <!-- start drag box -->
+                                <div class="drag-box">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>Drag and drop banner image Here or <span>Click</span> here for Upload
+                                        <input type="file">
+                                    </p>
+
+                                </div>
+                                <!-- text on banner -->
+                                <div class="banner-text">
+                                    <span class="title">Text On Bannser</span>
+                                    <label for="text-area" id="text-tools">
+                                        <textarea class="textArea" name="example"></textarea>
+
+                                        <span>10/50</span>
+                                    </label>
+
+                                </div>
+                                <!-- text layout -->
+                                <div class="text-layout">
+                                    <span class="title">
+                                        Layout Of Text
+                                    </span>
+                                    <!-- start layout box -->
+                                    <div class="layout-box">
+                                        <div class="overlay">
+                                            <span></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <!-- End single layoutbox -->
+                                    <!-- start layout box -->
+                                    <div class="layout-box">
+                                        <div class="overlay" dir="rtl">
+                                            <span></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <!-- End single layoutbox -->
+                                    <!-- start layout box -->
+                                    <div class="layout-box">
+                                        <div class="overlay">
+                                            <span class="line"></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <!-- End single layoutbox -->
+                                    <!-- start layout box -->
+                                    <div class="layout-box">
+                                        <div class="overlay" dir="rtl">
+                                            <span class="line"></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <!-- End single layoutbox -->
+                                </div>
+                                <!-- web logo -->
+                                <div class="web-logo">
+                                    <span class="title">
+                                        Logo Of Web
+                                    </span>
+                                    <img src="./images/logo.png" alt="">
+                                    <label for="logo">
+                                        <input type="file">
+                                        <button class="btn">Change</button>
+                                    </label>
+                                    <button class="btn">Remove</button>
+                                </div>
+                                <!-- layout color -->
+                                <div class="layout-color">
+                                    <span class="title">
+                                        Color Nav Menu
+                                    </span>
+                                    <div class="pallet">
+                                        <span class="one"></span>
+                                        <span class="two"></span>
+                                        <span class="three"></span>
+                                        <span class="four"></span>
+                                        <i class="fa-solid fa-pen"  data-bs-toggle="modal" data-bs-target="#pickColor"></i>
+                                    </div>
+                                    <div class="color-form">
+                                        <label for="">
+                                            <span class="title">
+                                                Butten Option
+                                            </span>
+                                            <input type="text" placeholder="text">
+                                        </label>
+                                        <div class="pallet">
+                                            <span class="title">
+                                                Butten Color
+                                            </span>
+                                            <span class="one"></span>
+                                            <span class="two"></span>
+                                            <span class="three"></span>
+                                            <span class="four"></span>
+                                            <i class="fa-solid fa-pen"  data-bs-toggle="modal" data-bs-target="#pickColor"></i>
+                                        </div>
+                                        <div class="pallet">
+                                            <span class="title">
+                                                Text Color
+                                            </span>
+                                            <span class="one"></span>
+                                            <span class="two"></span>
+                                            <span class="three"></span>
+                                            <span class="four"></span>
+                                            <i class="fa-solid fa-pen"  data-bs-toggle="modal" data-bs-target="#pickColor"></i>
+                                        </div>
+                                    </div>
+                                    <!-- End layout color -->
+                                    <!-- text layout -->
+                                    <div class="text-layout">
+                                        <span class="title">
+                                            Layout Of Butten
+                                        </span>
+                                        <!-- start layout box -->
+                                        <div class="layout-box">
+                                            <div class="overlay">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <!-- End single layoutbox -->
+                                        <!-- start layout box -->
+                                        <div class="layout-box">
+                                            <div class="overlay">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <!-- End single layoutbox -->
+                                        <!-- start layout box -->
+                                        <div class="layout-box">
+                                            <div class="overlay">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <!-- End single layoutbox -->
+                                        <!-- start layout box -->
+                                        <div class="layout-box">
+                                            <div class="overlay">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <!-- End single layoutbox -->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- End web banner -->
+                            <!-- Start video banner -->
+                            <div class="web-banner video-banner">
+                                <div class="header">
+                                    <h4>Video</h4>
+                                    <div>
+                                        <span><i class="fa-solid fa-plus"></i></span>
+                                        <span> <i class="fa-solid fa-pen"></i></span>
+                                        <span><i class="fa-solid fa-trash"></i></span>
+
+                                    </div>
+                                </div>
+                                <!-- start drag box -->
+                                <div class="drag-box">
+                                    <i class="fa-solid fa-video"></i>
+                                    <p><span>Click</span> here for Upload video
+                                        <input type="file">
+                                    </p>
+
+                                </div>
+                            </div>
+                            <!-- Start footer -->
+                            <footer>
+                                <div class="web-banner">
+                                    <div class="header">
+                                        <h4>Footer</h4>
+                                        <div>
+                                            <span><i class="fa-solid fa-plus"></i></span>
+                                            <span> <i class="fa-solid fa-pen"></i></span>
+                                            <span><i class="fa-solid fa-trash"></i></span>
+
+                                        </div>
+                                    </div>
+                                    <!-- start widgets  -->
+                                    <div class="footer-widget">
+                                        <span class="title">
+                                                Terms Of Service 
+                                        </span>
+                                        <label for="">
+                                            <input type="text" placeholder="Terms Of Service">
+                                            <span>10/50</span>
+                                        </label>
+                                    </div>
+                                    <!-- start widgets  -->
+                                    <div class="footer-widget">
+                                        <span class="title">
+                                                Privacy Notice 
+                                        </span>
+                                        <label for="">
+                                            <input type="text" placeholder="Privacy Notice ">
+                                            <span>10/50</span>
+                                        </label>
+                                    </div>
+                                    <!-- start widgets  -->
+                                    <div class="footer-social">
+                                        <span class="title">
+                                                Soical Media
+                                        </span>
+                                        <!-- single social linnk -->
+                                        <label for="">
+                                            <span class="so-icon"><i class="fa-brands fa-twitter"></i></span>
+                                            <input type="url" placeholder="link">
+                                          <div>
+                                                <p><i class="fa-solid fa-toggle-on"></i></p>
+                                            <p><i class="fa-solid fa-trash"></i></p>
+                                          </div>
+                                        </label>
+                                        <!-- single social linnk -->
+                                        <label for="">
+                                            <span class="so-icon"><i class="fa-brands fa-facebook"></i></span>
+                                            <input type="url" placeholder="link">
+                                            <div>
+                                                    <p><i class="fa-solid fa-toggle-on"></i></p>
+                                                <p><i class="fa-solid fa-trash"></i></p>
+                                              </div>
+                                        </label>
+                                        <!-- single social linnk -->
+                                        <label for="">
+                                            <span class="so-icon"><i class="fa-brands fa-instagram"></i></span>
+                                            <input type="url" placeholder="link">
+                                            <div>
+                                                    <p><i class="fa-solid fa-toggle-on"></i></p>
+                                                <p><i class="fa-solid fa-trash"></i></p>
+                                              </div>
+                                        </label>
+                                        <!-- single social linnk -->
+                                        <label for="">
+                                            <span class="so-icon"><i class="fa-brands fa-linkedin"></i></span>
+                                            <input type="url" placeholder="link">
+                                            <div>
+                                                    <p><i class="fa-solid fa-toggle-on"></i></p>
+                                                <p><i class="fa-solid fa-trash"></i></p>
+                                              </div>
+                                        </label>
+                                        <!-- single social linnk -->
+                                        <label for="">
+                                            <span class="so-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                                            <input type="url" placeholder="link">
+                                            <div>
+                                                    <p><i class="fa-solid fa-toggle-on"></i></p>
+                                                <p><i class="fa-solid fa-trash"></i></p>
+                                              </div>
+                                        </label>
+                                    </div>
+                            </footer>
+
+                        </div>
+                        <!-- End admin section -->
+
+                    </div>
+                </div>
+        </section>
+        <!-- End admin Panel -->
+        <!-- Start Modals -->
+        <div  class="category-modal modal fade" id="pickColor" tabindex="-1" aria-labelledby="pickColorLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- <span class="color-picker"></span> -->
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <h3 class="modal-title d-block mx-auto" id="pickColorLabel">Brand Color</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                        <input type="text" id="demo" value="#336699" />
+
+                </div>
+                <div class="modal-footer">
+       
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Start search in profile  -->
+        <section class="search-profile">
+            <div class="search-container">
+                <div class="close-search">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false"
+                        data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z">
+                        </path>
+                    </svg><!-- <i class="fa-solid fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
+                </div>
+            </div>
+
+        </section>
+        <!-- End search in profile  -->
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.0.min.js"
+        ></script>
+    <!-- color palet -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="></script>
+    <script src="js/iris.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js"
+        >
+    </script>
+      <!-- toolbar for text editor  -->
+  <script src="js/jquery.richtext.js"></script>
+    <!-- font-awesome -->
+    <script src="js/all.min.js"></script>
+     <!-- sweetalert -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- EqualHeight -->
+    <script src="js/jquery.equalheights.min.js"></script>
+    <!-- Select-s2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- own js -->
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //  responsive table
+            $('.main-table td, .main-table th').equalHeights();
+            $('#demo').iris({
+            width: 300, // the width in pixel
+            hide: false, // hide the color picker by default
+            palettes: ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'], // custom palette
+            color: false,
+            mode: 'hsl',
+            controls: {
+                horiz: 's', // horizontal defaults to saturation
+                vert: 'l', // vertical defaults to lightness
+                strip: 'h' // right strip defaults to hue
+                },
+            border: true, // draw a border around the collection of UI elements
+            target: false, // a DOM element / jQuery selector that the element will be appended within. Only used when called on an input.
+            width: 200, // the width of the collection of UI elements
+            change: function(event, ui) { // change callbacks
+                // event = standard jQuery event, produced by whichever control was changed.
+                // ui = standard jQuery UI object, with a color member containing a Color.js object
+            
+                // change the color
+                $("#SELECTOR").css( 'color', ui.color.toString());
+            }
+            });
+            $('.textArea').richText();
+        // start place holder
+        let input = $('.textArea').parents(".richText").find('.richText-editor');
+            input.attr('contenteditable')
+            input.attr('placeholder', 'Write here . . . ')
+
+            input.keypress(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', '')
+                }
+            });
+            input.keyup(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', 'write here ... ')
+                }
+            });
+            });
+    </script>
+
+</body>
+
+</html>

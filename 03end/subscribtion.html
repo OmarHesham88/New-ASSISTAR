@@ -1,0 +1,1528 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/icon-short.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+       >
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/richtext.min.css">
+         <!-- sweetalert -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.css">
+    <!-- Select-2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assistar Admin Panel</title>
+
+</head>
+
+<body>
+    <div class="content subscription">
+
+        <!-- Start admin Panel -->
+        <section class="container-fluid">
+            <div class="admin-panel">
+                <div class="row">
+                    <!-- start panel-section -->
+                    <div class="col-md-1">
+                        <div class="admin-picture">
+                            <img src="./images/admin.png" alt="">
+                        </div>
+                        <div class="panel-line">
+                            <ul>
+                                <a href="admin.html">
+                                    <li class="active"><img src="./images/shape-outline.png" alt=""></li>
+                                </a>
+                                <a href="tags.html">
+                                    <li><img src="./images/tags.png" alt=""></li>
+                                </a>
+                                <a href="coupons.html">
+                                    <li><img src="./images/coupons.png" alt=""></li>
+                                </a>
+                                <a href="offers.html">
+                                    <li><img src="./images/offers.png" alt=""></li>
+                                </a>
+                                <a href="subscribtion.html">
+                                    <li><img src="./images/playlist-check.png" alt=""></li>
+                                </a>
+                                <a href="templates.html">
+                                    <li><img src="./images/file-document-outline.png" alt=""></li>
+                                </a>
+                                <a href="users.html">
+                                    <li><img src="./images/account-outline.png" alt=""></li>
+                                </a>
+                                <a href="admins.html">
+                                    <li><img src="./images/account-multiple-outline.png" alt=""></li>
+                                </a>
+                                <a href="invoices.html">
+                                    <li><img src="./images/receipt-text-outline.png" alt=""></li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="panel-bottom">
+                            <a href="setting.html" class="setting">
+                                <i class="fa-solid fa-gears"></i>
+                            </a>
+                            <div class="profile-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="notification">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- panel-nav -->
+                    <div class="open-panel">
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </div>
+                    <div class="close-panel">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  
+                    <div class="panel-nav">
+
+                        <div class="panel-header">
+                            <h4>ASSISTAR</h4>
+                            <!-- panel-nav -->
+
+                        </div>
+
+                        <div class="panel-slide">
+                            <div class="search">
+                                <input type="text" placeholder="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <ul>
+                                <a href="admin.html">
+                                    <li><img src="./images/shape-outline.png" alt="">Categories</li>
+                                </a>
+                                <a href="tags.html">
+                                    <li><img src="./images/tags.png" alt="">Tags</li>
+                                </a>
+                                <a href="coupons.html">
+                                    <li><img src="./images/coupons.png" alt="">Coupons</li>
+                                </a>
+                                <a href="offers.html">
+                                    <li><img src="./images/offers.png" alt="">Offers</li>
+                                </a>
+                                <a href="subscribtion.html">
+                                    <li class="active"><img src="./images/playlist-check.png" alt="">Subscription
+                                        Management</li>
+                                </a>
+                                <a href="templates.html">
+                                    <li><img src="./images/file-document-outline.png" alt="">Templates</li>
+                                </a>
+                                <a href="users.html">
+                                    <li><img src="./images/account-outline.png" alt="">Users </li>
+                                </a>
+                                <a href="admins.html">
+                                    <li><img src="./images/account-multiple-outline.png" alt="">Admins</li>
+                                </a>
+                                <a href="invoices.html">
+                                    <li><img src="./images/receipt-text-outline.png" alt="">Invoices</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- End panel-section -->
+                    <!-- Start admin section -->
+                    <div class="col-md-11">
+                        <div class="admin-section">
+                            <h3>Subscription Management</h3>
+                            <div class="category-header">
+                                <!-- Start add new line   -->
+                                <div class="add-category">
+                                    <div class="category-total">
+                                        <p>Subscription (<span>8</span>)</p>
+                                    </div>
+                                    <div class="add-new" data-bs-toggle="modal" data-bs-target="#AddSubscription">
+                                        <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                                        <span>Add Subscription </span>
+                                    </div>
+                                </div>
+                                <!-- Start filter line -->
+                                <div class="category-filter">
+                                    <div class="search">
+                                        <input type="text" placeholder="Search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="filter filter-by">
+                                        <i class="fa-solid fa-sliders"></i>
+                                        Filter By
+                                    </div>
+                                    <div class="filter sort-by">
+                                        <i class="fa-solid fa-arrow-up-wide-short"></i>
+                                        Sort By
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Sort by menu -->
+                            <div class="sort-menu">
+                                <ul>
+                                    <a href="#">
+                                        <li>Name (A-Z)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Name (Z-A)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Date Created (Oldest-Newest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Date Created (Newest-Oldest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Last Update (Oldest-Newest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Last Update (Newest-Oldest)</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <!-- End Sort by menu -->
+                            <!-- Start filter by menu -->
+                            <div class="filter-menu">
+                                <ul>
+                                    <a href="#">
+                                        <li>Recented</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Name (Z-A)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Date Created (Oldest-Newest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Date Created (Newest-Oldest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Last Update (Oldest-Newest)</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Last Update (Newest-Oldest)</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <!-- End filter by menu -->
+                        </div>
+                        <!-- Start table -->
+                        <table class="table main-table responsive-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Date Created </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Subscription In English </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Subscription In Arabic
+                                    </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Templates</th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Last Update </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Subscription Price
+                                    </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+                                <!-- Start Single category row  -->
+                                <tr class="subscription-row">
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>House</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic:
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <img src="./images/home.png" alt="">
+                                                <span>عقد ايجار شقة</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates :
+                                            </span>
+                                            <p><i class="fa-regular fa-newspaper" data-bs-toggle="modal"
+                                                    data-bs-target="#templateModal"></i></p>
+                                        </div>
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Last Update :
+                                            </span>
+                                            <p>01 Feb, 2020</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Subscription Price :
+                                            </span>
+                                            <p>OMR 0.652</p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Action :
+                                            </span>
+                                            <p>
+                                                <i class="fa-solid fa-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#viewSubscription"></i>
+                                                <i class="fa-solid fa-pen" data-bs-toggle="modal"
+                                                    data-bs-target="#editSubscription"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <!-- End Single category row  -->
+
+
+                            </tbody>
+                        </table>
+                        <!-- End table -->
+                        <div class="page-counter">
+                            <p class="total-record">
+                                Total Records: <span class="records"> 8</span>
+                            </p>
+                            <div class="page-show d-flex">
+                                    <div>page <p class="counter-line">
+                                            <span class="current-page counter">1</span>
+                                            <span class="counter-btns">
+                                                <button class="plus">
+                                                        <i class="fa-solid fa-caret-up counterPlus"></i>
+                                                </button>
+                                                <button class="mince">
+                                                        <i class="fa-solid fa-caret-down counterMince"></i>
+    
+                                                </button>
+                                            </span>
+                                        </p>
+                                        of
+                                        <span class="pagesAll counterLength">10</span>
+                                    </div>
+                                <div class="show-num">
+                                    Show <p><select class="num">8</select> <i class="fa-solid fa-caret-down"></i>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End admin section -->
+
+                </div>
+            </div>
+        </section>
+        <!-- End admin Panel -->
+        <!-- Start Modals -->
+        <!-- Start  Add category Modal -->
+        <div class="category-modal modal fade" id="AddSubscription" tabindex="-1" aria-labelledby="AddSubscriptionLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title d-block mx-auto" id="AddSubscriptionLabel">Add Subscription </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-body py-0">
+                        <label class="label-box">
+                            <span>Subscription In English</span>
+                            <input type="text" placeholder="Title">
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription In Arabic</span>
+                            <input type="text" placeholder="العنوان">
+                        </label>
+                        <label class="label-box">
+                            <select class="js-example-basic-single">
+                                <option value="AL">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription Price</span>
+                            <input type="text" placeholder="32 OMR">
+                        </label>
+                        <label class="label-box mb-2">
+                            <select class="js-example-basic-single">
+                                <option value="AL">Currency</option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label for="page-content" class="text-editor position-relative">
+                            <h6>Arabic Description</h6>
+                            <textarea class="arabicText" name="example"></textarea>
+
+                        </label>
+                        <label for="page-content" class="text-editor position-relative">
+                            <h6> English Description</h6>
+                            <textarea class="textArea" name="example"></textarea>
+
+                        </label>
+                    </div>
+                    <div class="modal-footer py-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End  Add category Modal -->
+        <!-- Start Edit Category Modal -->
+        <div class="category-modal modal fade" id="editSubscription" tabindex="-1"
+            aria-labelledby="editSubscriptionLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title d-block mx-auto" id="editSubscriptionLabel">Edit Subscription </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-body py-0">
+                        <label class="label-box">
+                            <span>Subscription In English</span>
+                            <input type="text" placeholder="Title">
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription In Arabic</span>
+                            <input type="text" placeholder="العنوان">
+                        </label>
+                        <label class="label-box">
+                            <select class="js-example-basic-single">
+                                <option value="AL">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription Price</span>
+                            <input type="text" placeholder="32 OMR">
+                        </label>
+                        <label class="label-box mb-2">
+                            <select class="js-example-basic-single">
+                                <option value="AL">Currency</option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label for="content" class="text-editor">
+                            <span>Desctraptions</span>
+                            <textarea class="editText"></textarea>
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Edit Category Modal -->
+        <!-- Start View Category Modal -->
+        <div class="category-modal modal fade" id="viewSubscription" tabindex="-1"
+            aria-labelledby="viewSubscriptionLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title d-block mx-auto" id="viewSubscriptionLabel">Subscription Details</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-body py-0">
+                        <label class="label-box">
+                            <span>Subscription In English</span>
+                            <input type="text" placeholder="Title" readonly>
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription In Arabic</span>
+                            <input type="text" placeholder="العنوان" readonly>
+                        </label>
+                        <label class="label-box">
+                            <select class="js-example-basic-single" aria-readonly="true">
+                                <option value="AL">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+                                <option value="WY">Templates</option>
+
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label class="label-box mb-2">
+                            <span>Subscription Price</span>
+                            <input type="text" placeholder="32 OMR" readonly>
+                        </label>
+                        <label class="label-box mb-2">
+                            <select class="js-example-basic-single" aria-readonly="true">
+                                <option value="AL">Currency</option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                                <option value="WY">OMR 0.652 </option>
+                            </select>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </label>
+                        <label for="page-content" class="text-editor label-box">
+                            <span>Desctraptions</span>
+                            <textarea class="ps-2" name="page-content" rows="5" placeholder="Write here..."
+                                readonly></textarea>
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary d-block mx-auto"
+                            data-bs-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End View Category Modal -->
+        <!-- Start Template Modal -->
+        <div class="category-modal modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="templateModalLabel">Templates Assigned</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-body p-0">
+                        <!-- Start table -->
+                        <table class="table template-table responsive-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center"><img src="./images/category.png" alt="">
+                                        Date Created </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Subscription In English </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Subscription In Arabic
+                                    </th>
+                                    <th scope="col"><img src="./images/category.png" alt="">
+                                        Templates Assigned</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Annual Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك سنوي</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property, Business Formation</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Single Template Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك قالب واحد</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Annual Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك سنوي</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property, Business Formation</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Single Template Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك قالب واحد</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Annual Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك سنوي</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property, Business Formation</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+                                <!-- Start Single category row  -->
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Date Created :
+                                            </span>
+                                            <p class="text-center">01 Feb, 2020</p>
+                                        </div>
+                                    </th>
+                                    <!-- start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In English :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>Single Template Subscription</span>
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <span class="responsive-title">
+                                            <img src="./images/category.png" alt="">
+                                            Subscription In Arabic :
+                                        </span>
+                                        <div class="row-content">
+                                            <p>
+                                                <span>اشتراك قالب واحد</span>
+                                            </p>
+                                            <p>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            </p>
+                                        </div>
+
+                                    </td>
+                                    <!-- Start single data -->
+                                    <td>
+                                        <div>
+                                            <span class="responsive-title">
+                                                <img src="./images/category.png" alt="">
+                                                Templates Assigned:
+                                            </span>
+                                            <p class="d-block">Rent Out Property</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- End Single category row  -->
+
+                            </tbody>
+
+                        </table>
+                        <!-- End table -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EndTemplate Modal -->
+        <!-- Start search in profile  -->
+        <section class="search-profile">
+            <div class="search-container">
+                <div class="close-search">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false"
+                        data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z">
+                        </path>
+                    </svg><!-- <i class="fa-solid fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
+                </div>
+            </div>
+
+        </section>
+        <!-- End search in profile  -->
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.0.min.js"
+        ></script>
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js"
+        >
+    </script>
+  <!-- toolbar for text editor  -->
+  <script src="js/jquery.richtext.js"></script>
+    <!-- font-awesome -->
+    <script src="js/all.min.js"></script>
+  <!-- sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- EqualHeight -->
+    <script src="js/jquery.equalheights.min.js"></script>
+    <!-- own js -->
+    <!-- Select-s2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //  responsive table
+            $('.main-table td, .main-table th').equalHeights();
+            $('.textArea').richText();
+            $('.editText').richText();
+            $('.arabicText').richText();
+
+        // start place holder
+        let input = $('.textArea').parents(".richText").find('.richText-editor');
+            input.attr('contenteditable')
+            input.attr('placeholder', 'Write here . . . ')
+
+            input.keypress(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', '')
+                }
+            });
+            input.keyup(function () {
+                if (input.text().length == 0) {
+                    input.attr('placeholder', 'write here ... ')
+                }
+            });
+            // start place holder
+            let editInput = $('.editText').parents(".richText").find('.richText-editor');
+            editInput.attr('contenteditable')
+            editInput.attr('placeholder', 'Write here . . . ')
+
+            editInput.keypress(function () {
+                if (editInput.text().length == 0) {
+                    editInput.attr('placeholder', '')
+                }
+            });
+            editInput.keyup(function () {
+                if (editInput.text().length == 0) {
+                    editInput.attr('placeholder', 'write here ... ')
+                }
+            });
+                       // start place holder
+                       let arabicInput = $('.arabicText').parents(".richText").find('.richText-editor');
+            arabicInput.attr('contenteditable')
+            arabicInput.attr('placeholder', 'Write here . . . ')
+
+           arabicInput.keypress(function () {
+                if (arabicInput.text().length == 0) {
+                    arabicInput.attr('placeholder', '')
+                }
+            });
+            arabicInput.keyup(function () {
+                if (arabicInput.text().length == 0) {
+                    arabicInput.attr('placeholder', 'write here ... ')
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
