@@ -1822,6 +1822,7 @@ ul.social-conatct li img.face {
 .navbar-actions {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .navbar-lang-switch {
@@ -1835,6 +1836,7 @@ ul.social-conatct li img.face {
 
 .navbar-lang-switch:hover {
   text-decoration: none;
+  color: white;
 }
 
 .navbar-login-btn {
@@ -1854,6 +1856,7 @@ ul.social-conatct li img.face {
 
 .navbar-login-btn:hover {
   color: #1e3c72;
+  text-decoration: none;
   transform: scale(1.05);
 }
 
@@ -1873,7 +1876,7 @@ ul.social-conatct li img.face {
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
   .navbar-links {
     display: none; /* Hide links initially */
     flex-direction: column;
@@ -2173,7 +2176,6 @@ ol.stepper li {
   display: grid;
   place-items: center;
   gap: 5px;
-  font-family: sans-serif;
   position: relative;
 }
 ol.stepper li::before {
@@ -2188,7 +2190,6 @@ ol.stepper li::before {
   background: var(--active-b);
   color: var(--active-c);
   border-radius: 50%;
-  font-family: monospace;
   z-index: 1;
 }
 ol.stepper li.active-stepper::before {
@@ -2807,12 +2808,14 @@ ol.stepper.one-third-completion {
 }
 
 /* Back Button Styling */
-#back-button {
+#back-button,
+#back-button1 {
   background-color: #a31921; /* Red color */
 }
 
 /* Next Button Styling */
-#next-button {
+#next-button,
+#next-button1 {
   background-color: #235790; /* Blue color */
 }
 
@@ -3010,7 +3013,6 @@ ol.stepper.one-third-completion {
 .legal-support-form .form-control {
   border: 1px solid #dcdfe3;
   border-radius: 8px;
-  font-size: 0.9rem;
   padding: 10px;
   box-shadow: none;
   height: 40px;
