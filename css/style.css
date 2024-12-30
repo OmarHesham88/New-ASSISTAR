@@ -1733,6 +1733,11 @@ ul.social-conatct li img.face {
   color: white;
   filter: saturate(85%);
 }
+
+.indexboom {
+  z-index: 10;
+}
+
 @media (max-width: 767px) {
   .legal-support-container-fluid {
     padding: 0 !important;
@@ -1804,6 +1809,7 @@ ul.social-conatct li img.face {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s ease;
+  padding: 5px;
 }
 
 .navbar-links a:hover {
@@ -1841,7 +1847,6 @@ ul.social-conatct li img.face {
 }
 
 .navbar-login-btn {
-  display: flex;
   align-items: center;
   gap: 10px;
   background-color: white;
@@ -1853,6 +1858,9 @@ ul.social-conatct li img.face {
   cursor: pointer;
   transition: transform 0.3s, color 0.3s;
   z-index: 5;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-login-btn:hover {
@@ -1919,7 +1927,6 @@ ul.social-conatct li img.face {
   .mobile-login .navbar-login-icon img {
     width: 18px;
     height: 18px;
-    margin-left: 10px;
   }
 }
 
@@ -2115,7 +2122,7 @@ ul.social-conatct li img.face {
   background-color: white;
   border-radius: 20px;
   max-width: 90%;
-  margin: 20px auto 0 auto;
+  margin: 80px auto 0 auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -2169,7 +2176,9 @@ ul.social-conatct li img.face {
     justify-content: flex-start; /* Align boxes to the left on smaller screens */
     gap: 15px; /* Reduce gap for smaller screens */
   }
-
+  .navbar-actions {
+    display: none;
+  }
   .support-box {
     flex: 1 1 100%; /* Take full width on smaller screens */
     max-width: 100%; /* Ensure no box exceeds the container's width */
@@ -2285,10 +2294,17 @@ ol.stepper {
   counter-reset: step;
   overflow: hidden;
 }
+
+@media (max-width: 350px) {
+  ol.stepper {
+    font-size: 10px;
+  }
+}
 ol.stepper li {
   display: grid;
   place-items: center;
   gap: 5px;
+  font-family: sans-serif;
   position: relative;
 }
 ol.stepper li::before {
@@ -2303,6 +2319,7 @@ ol.stepper li::before {
   background: var(--active-b);
   color: var(--active-c);
   border-radius: 50%;
+  font-family: monospace;
   z-index: 1;
 }
 ol.stepper li.active-stepper::before {
@@ -3096,7 +3113,7 @@ ol.stepper.one-third-completion {
 
 /* Highlight when selected */
 .form-check-input:checked + .form-check-label {
-  color: #235790; /* Blue text color for selected */
+  color: #235790;
   width: 100%;
 }
 
@@ -3119,7 +3136,7 @@ ol.stepper.one-third-completion {
 /* Hover Effect for Radio Button Container */
 .form-check:hover {
   border-color: #235790;
-  background-color: #f9fafb; /* Slight background change on hover */
+  background-color: #f9fafb;
 }
 
 /* Input Fields */
@@ -3200,4 +3217,66 @@ ol.stepper.one-third-completion {
 .hero-cta-btn {
   z-index: 999999999999; /* Set it higher to ensure it's above overlapping elements */
   position: relative; /* Ensure z-index takes effect */
+}
+
+.custom-phone-container {
+  max-width: 400px;
+}
+
+.custom-form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.custom-input-group {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.custom-country-select {
+  padding: 12px;
+  border: none;
+  background-color: #f9f9f9; /* Add your desired background color */
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 90px;
+  text-align: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  background-size: 14px;
+  padding-left: 28px;
+}
+
+.custom-phone-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+  background-color: transparent;
+}
+
+.custom-phone-input::placeholder {
+  color: #999;
+}
+
+/* Remove focus outlines */
+.custom-country-select:focus,
+.custom-phone-input:focus {
+  outline: none;
+}
+
+/* Optional: Add a subtle hover state */
+.custom-input-group:hover {
+  border-color: #d0d0d0;
 }

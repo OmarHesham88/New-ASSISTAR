@@ -2,15 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu toggle
   const toggleButton = document.querySelector(".navbar-toggle");
   const navbarLinks = document.querySelector(".navbar-links");
+  const indexz = document.querySelector(".legal-support-container-fluid");
   toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("show");
+    indexz.classList.toggle("indexboom");
   });
-
-  // FAQ toggle
-  function toggleFaq(element) {
-    const faqItem = element.closest(".faq-item");
-    faqItem.classList.toggle("active");
-  }
 
   document.addEventListener("DOMContentLoaded", () => {
     const backButton = document.getElementById("back-button1");
@@ -92,3 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// FAQ toggle
+function toggleFaq(element) {
+  const faqItem = element.closest(".faq-item");
+  faqItem.classList.toggle("active");
+}

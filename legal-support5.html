@@ -22,10 +22,12 @@
               <img src="image/new-logo.png" alt="Logo" />
             </a>
           </div>
-      
+
           <!-- Mobile Toggle Button -->
-          <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
-      
+          <button class="navbar-toggle" aria-label="Toggle navigation">
+            ☰
+          </button>
+
           <!-- Navigation Links -->
           <ul class="navbar-links">
             <li><a href="#">الدعم</a></li>
@@ -38,11 +40,22 @@
             </li>
             <li><a href="#">النماذج</a></li>
             <li><a href="#">الصفحة الرئيسية</a></li>
+
+            <!-- Add تسجيل الدخول here for mobile -->
+            <li class="mobile-login">
+              <a href="#" class="navbar-login-btn">
+                تسجيل الدخول
+                <span class="navbar-login-icon">
+                  <img src="image/login.png" alt="Login Icon" />
+                </span>
+              </a>
+            </li>
           </ul>
-      
+
           <!-- Action Buttons -->
-          <div class="navbar-actions">
+          <div class="navbar-actions desktop-login">
             <a href="#" class="navbar-lang-switch">ENG</a>
+            <!-- Hide this for mobile -->
             <a href="#" class="navbar-login-btn">
               تسجيل الدخول
               <span class="navbar-login-icon">
@@ -52,24 +65,21 @@
           </div>
         </div>
       </nav>
-      
-      
-      
-        <div class="hero-section">
-          <div class="hero-content">
-            <p class="hero-subtitle">اعمل مع خبراء قانونيين متخصصين</p>
-            <h2 class="hero-title">احصل على دعم قانوني احترافي لشركتك</h2>
-            <p class="hero-description">
-              هل تحتاج إلى وثائق قانونية أو مشورة لعملك؟ أرسل طلبك، وسيساعدك
-              محامونا ذو الخبرة لتقديم حلول مخصصة وموثوقة تلبي احتياجاتك.
-            </p>
-            <a href="your-link-here" class="hero-cta-btn">
-              <button type="button">ابدأ طلبك الآن</button>
-            </a>
-                      </div>
+
+      <div class="hero-section">
+        <div class="hero-content">
+          <p class="hero-subtitle">اعمل مع خبراء قانونيين متخصصين</p>
+          <h2 class="hero-title">احصل على دعم قانوني احترافي لشركتك</h2>
+          <p class="hero-description">
+            هل تحتاج إلى وثائق قانونية أو مشورة لعملك؟ أرسل طلبك، وسيساعدك
+            محامونا ذو الخبرة لتقديم حلول مخصصة وموثوقة تلبي احتياجاتك.
+          </p>
+          <a href="your-link-here" class="hero-cta-btn">
+            <button type="button">ابدأ طلبك الآن</button>
+          </a>
         </div>
-        
       </div>
+    </div>
       
 
     <!-- Support -->
@@ -285,117 +295,9 @@
  </footer>
 
 
- <script>
-function toggleFaq(element) {
-  const faqItem = element.closest('.faq-item');
-  faqItem.classList.toggle('active');
-}
-const toggleButton = document.querySelector('.navbar-toggle');
-const dropdownMenu = document.querySelector('.navbar-dropdown');
 
-toggleButton.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('active');
-});
-
-
-
-const backButton = document.getElementById('back-button');
-const nextButton = document.getElementById('next-button');
-
-function updateButtonState() {
-  const hasSelected = document.querySelector('.branch-support-box.selected') !== null;
-
-  if (hasSelected) {
-    backButton.classList.remove('disabled');
-    nextButton.classList.remove('disabled');
-  } else {
-    backButton.classList.add('disabled');
-    nextButton.classList.add('disabled');
-  }
-}
-
-document.querySelector('.deadline-icon').addEventListener('click', () => {
-  document.getElementById('deadline').focus();
-});
-
-
-
-document.getElementById('back-button').addEventListener('click', function () {
-  window.location.href = '';
-});
-document.getElementById('next-button').addEventListener('click', function () {
-  window.location.href = '';
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  flatpickr("#deadline", {
-    altInput: true, 
-    altFormat: "d M Y", 
-    dateFormat: "Y-m-d", 
-    disableMobile: true, 
-  });
-
-  const icon = document.querySelector(".deadline-icon");
-  const input = document.querySelector("#deadline");
-  if (icon) {
-    icon.addEventListener("click", () => {
-      input._flatpickr.open();
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const countryCodeSelect = document.getElementById("countryCode");
-  const phoneNumberInput = document.getElementById("phoneNumber");
-
-  // Display the selected country code in the console (for debugging)
-  countryCodeSelect.addEventListener("change", function () {
-    console.log("Selected country code:", countryCodeSelect.value);
-  });
-
-  // Example: Combine country code and phone number for submission
-  const getFullPhoneNumber = () => {
-    const countryCode = countryCodeSelect.value;
-    const phoneNumber = phoneNumberInput.value;
-    return `${countryCode} ${phoneNumber}`;
-  };
-
-  // Example usage
-  phoneNumberInput.addEventListener("input", function () {
-    console.log("Full phone number:", getFullPhoneNumber());
-  });
-});
-
-// Wait for the DOM to load
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('yourFormId'); // Replace with your form's ID
-  const phoneInput = document.getElementById('phoneNumber');
-  const phoneField = phoneInput.parentElement.parentElement;
-
-  form.addEventListener('submit', function (event) {
-    // Simple regex for phone number validation (adjust as needed)
-    const phoneRegex = /^[0-9]{9,15}$/; // Example: 9 to 15 digits
-
-    if (!phoneRegex.test(phoneInput.value.trim())) {
-      event.preventDefault(); // Prevent form submission
-      phoneField.classList.add('invalid');
-    } else {
-      phoneField.classList.remove('invalid');
-    }
-  });
-
-  // Remove invalid class on input
-  phoneInput.addEventListener('input', function () {
-    if (phoneField.classList.contains('invalid')) {
-      phoneField.classList.remove('invalid');
-    }
-  });
-});
-
-</script>
     <!-- Flatpickr JavaScript -->
     <script src="js/flatpickr.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
